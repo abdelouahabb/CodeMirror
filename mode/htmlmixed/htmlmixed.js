@@ -19,7 +19,7 @@ CodeMirror.defineMode("htmlmixed", function(config, parserConfig) {
   var cssMode = CodeMirror.getMode(config, "css");
 
   var scriptTypes = [], scriptTypesConf = parserConfig && parserConfig.scriptTypes;
-  scriptTypes.push({matches: /^(?:text|application)\/(?:x-)?(?:java|ecma)script$|^$/i,
+  scriptTypes.push({matches: /^(?:text|application)\/jsx$|(?:x-)?(?:java|ecma)script$|^$/i,
                     mode: CodeMirror.getMode(config, "javascript")});
   if (scriptTypesConf) for (var i = 0; i < scriptTypesConf.length; ++i) {
     var conf = scriptTypesConf[i];
